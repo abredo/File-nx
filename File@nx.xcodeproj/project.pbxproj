@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3A83D6861CAA793A00B94C38 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83D6851CAA793A00B94C38 /* main.swift */; };
 		3A84FE7F1CACF5F9005BE4E4 /* PngHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A84FE7E1CACF5F9005BE4E4 /* PngHelper.m */; };
+		3A9241CF1E15FC5600072346 /* SystemTaskHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9241CE1E15FC5600072346 /* SystemTaskHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,8 @@
 		3A84FE7C1CACF5F8005BE4E4 /* File@nx-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "File@nx-Bridging-Header.h"; sourceTree = "<group>"; };
 		3A84FE7D1CACF5F9005BE4E4 /* PngHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PngHelper.h; sourceTree = "<group>"; };
 		3A84FE7E1CACF5F9005BE4E4 /* PngHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PngHelper.m; sourceTree = "<group>"; };
+		3A9241CD1E15FC5600072346 /* SystemTaskHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemTaskHelper.h; sourceTree = "<group>"; };
+		3A9241CE1E15FC5600072346 /* SystemTaskHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemTaskHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,8 @@
 				3A83D6851CAA793A00B94C38 /* main.swift */,
 				3A84FE7D1CACF5F9005BE4E4 /* PngHelper.h */,
 				3A84FE7E1CACF5F9005BE4E4 /* PngHelper.m */,
+				3A9241CD1E15FC5600072346 /* SystemTaskHelper.h */,
+				3A9241CE1E15FC5600072346 /* SystemTaskHelper.m */,
 				3A84FE7C1CACF5F8005BE4E4 /* File@nx-Bridging-Header.h */,
 			);
 			path = "File@nx";
@@ -101,6 +106,7 @@
 				TargetAttributes = {
 					3A83D6811CAA793A00B94C38 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -126,6 +132,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A9241CF1E15FC5600072346 /* SystemTaskHelper.m in Sources */,
 				3A83D6861CAA793A00B94C38 /* main.swift in Sources */,
 				3A84FE7F1CACF5F9005BE4E4 /* PngHelper.m in Sources */,
 			);
@@ -224,6 +231,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "File@nx/File@nx-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -234,6 +242,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "File@nx/File@nx-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};

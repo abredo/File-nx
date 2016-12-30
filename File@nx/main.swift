@@ -21,21 +21,31 @@ func resizeFile( originFile : String,fileSuffix : String, width : Float,height :
     
     let cpFileCmd = "cp \(originFile) \(nFileName)"
     print(cpFileCmd)
-    system(cpFileCmd)
-   /* -z pixelsH pixelsW
-    --resampleHeightWidth pixelsH pixelsW
-    Resample image at specified size. Image apsect ratio may be
-    altered.*/
+    //    system(cpFileCmd)
+    SystemTaskHelper.performSystemTask(cpFileCmd)
+    
+    
+    
+    /* -z pixelsH pixelsW
+     --resampleHeightWidth pixelsH pixelsW
+     Resample image at specified size. Image apsect ratio may be
+     altered.*/
     let sizp = "sips -z \(height) \(width) \(nFileName)"
-//    let sizp = "sips -Z \(width) \(fileName2)"
-    system(sizp)
+    //    let sizp = "sips -Z \(width) \(fileName2)"
+    //    system(sizp)
+    SystemTaskHelper.performSystemTask(sizp)
     print(sizp)
+    
+}
+
+func performTask()
+{
     
 }
 
 func getImageSize(imagePath : String) -> CGSize {
     print(imagePath)
-   return PngHelper.getPNGSize(imagePath)
+    return PngHelper.getPNGSize(imagePath)
 }
 
 
@@ -63,7 +73,8 @@ if arguments.count > 1
         dfmt.dateFormat = "yyyyMMdd_HH:mm:ss"
         let now = dfmt.stringFromDate(NSDate())
         let destFilePath = dirPath + "/" + "\(now)_Files"
-        system("mkdir \(destFilePath)")
+        //        system("mkdir \(destFilePath)")
+        SystemTaskHelper.performSystemTask("mkdir \(destFilePath)")
         
         for i in 0..<childArray.count
         {
@@ -82,7 +93,8 @@ if arguments.count > 1
                 {
                     let destResizeFilePath = destFilePath + "/" + imageName
                     //cp file to destination path
-                    system("cp \(originFilePath) \(destResizeFilePath)")
+                    //                    system("cp \(originFilePath) \(destResizeFilePath)")
+                    SystemTaskHelper.performSystemTask("cp \(originFilePath) \(destResizeFilePath)")
                     
                     //@2x.png
                     resizeFile(destResizeFilePath, fileSuffix: "@2x", width:Float(imageSize.width) * 2.0 / 3.0, height:Float( imageSize.height) * 2.0 / 3.0)
@@ -90,9 +102,9 @@ if arguments.count > 1
                     //@3x.png
                     resizeFile(destResizeFilePath, fileSuffix: "@3x", width:Float( imageSize.width), height:Float( imageSize.height))
                     //.png
-                   resizeFile(destResizeFilePath, fileSuffix: "", width:Float( imageSize.width)  / 3.0, height:Float( imageSize.height)  / 3.0)
+                    resizeFile(destResizeFilePath, fileSuffix: "", width:Float( imageSize.width)  / 3.0, height:Float( imageSize.height)  / 3.0)
                 }
-               
+                
             }
             
         }
