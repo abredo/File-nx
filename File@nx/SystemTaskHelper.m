@@ -3,7 +3,7 @@
 //  File@nx
 //
 //  Created by juliano on 12/30/16.
-//  Copyright © 2016 Chindle. All rights reserved.
+//  Copyright © 2016 juliano. All rights reserved.
 //
 
 #import "SystemTaskHelper.h"
