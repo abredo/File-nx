@@ -9,8 +9,10 @@
 #import "SystemTaskHelper.h"
 
 @implementation SystemTaskHelper
+
 +(void)performSystemTask:(NSString *)task
 {
     system([task UTF8String]);
 }
+
 @end
