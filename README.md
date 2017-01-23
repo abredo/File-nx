@@ -2,6 +2,7 @@
 swift command line for creating @2x @3x .png used in iOS Apps.
 ![image](https://github.com/abredo/File-nx/blob/master/tips.gif) 
 
+![image](https://github.com/abredo/File-nx/blob/master/File%40nx_gold.gif) 
 ```swift
 //
 //  main.swift
